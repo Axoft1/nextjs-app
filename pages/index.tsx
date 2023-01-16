@@ -1,13 +1,16 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Button, Htag, P, Tag } from '../components';
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import { useState } from "react";
+import { Button, Htag, P, Rating, Tag } from "../components";
+import { Layout } from "../layout/Layout";
+import styles from "../styles/Home.module.css";
 // import { Inter } from '@next/font/google'
 
 // const inter = Inter({ subsets: ['latin'] })
 
-export default function Home():JSX.Element {
+export default function Home(): JSX.Element {
   const a = 1;
+  const [rating, setRating] = useState<number>(4);
   return (
     <>
       <Head>
@@ -22,8 +25,9 @@ export default function Home():JSX.Element {
           rel="stylesheet"
         />
       </Head>
-      <main className={styles.main}>
+      <Layout>
         <Htag tag={"h1"}>Text</Htag>
+        <Rating rating={rating} isEditable={true} setRating={setRating} />
         <Button appearance="primary" arrow="right">
           Кнопка
         </Button>
@@ -46,8 +50,7 @@ export default function Home():JSX.Element {
         <Tag size="s" color="primary" href="#">
           primary
         </Tag>
-        
-      </main>
+      </Layout>
     </>
   );
 }

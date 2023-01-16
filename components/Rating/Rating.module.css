@@ -1,0 +1,11 @@
+.filled svg{
+  fill: var(--primary);
+  transition: all 0.5s;
+}
+.star svg{
+  transition: all 0.5s;
+  margin-right: 5px;
+}
+.editable{
+  cursor: pointer;
+}
