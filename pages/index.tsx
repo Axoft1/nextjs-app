@@ -11,7 +11,7 @@ function Home({menu}:HomeProps): JSX.Element {
   return (
     <>
     <ul>
-      {menu.map(m => (<li key={m._id.secondCategory}>{m._id.secondCategory}</li>))}
+      {/* {menu.map(m => (<li key={m._id.secondCategory}>{m._id.secondCategory}</li>))} */}
     </ul>
       <Htag tag={"h1"}>Text</Htag>
       <Rating rating={rating} isEditable={true} setRating={setRating} />
